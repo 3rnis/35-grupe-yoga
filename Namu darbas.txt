@@ -1,1 +1,0 @@
-Per visus projektus pereiti stilius ir perasyti i style head elemente, optimizuoti pasikartojanti koda.
