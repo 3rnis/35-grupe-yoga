@@ -1,0 +1,11 @@
+header,
+main {
+    background-color: yellow; 
+    width: 800px; 
+    /* elemento iscentravimas 100% (visas elemento dydis) - 800px elemento plotis supaprastinam (kadangi mums reikia atsitraukti i kaire ne 100% likusio ploto o 50%) ir gaunam 50% - 400px*/
+    margin-left: calc(50% - 400px); 
+}
+
+main {
+    margin-top: 100px;
+}
