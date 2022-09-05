@@ -1,36 +1,83 @@
-body{
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-header,
-main {
-    background-color: cyan; 
-    width: 800px; 
-    /* elemento iscentravimas 100% (visas elemento dydis) - 800px elemento plotis supaprastinam (kadangi mums reikia atsitraukti i kaire ne 100% likusio ploto o 50%) ir gaunam 50% - 400px*/
-    margin-left: calc(50% - 400px); 
-}
+body > header,
+body > main {
+    width: 1000px; 
+    margin-left: calc(50% - 500px); 
+}   /* elemento iscentravimas 100% (visas elemento dydis) - 800px elemento plotis supaprastinam (kadangi mums reikia atsitraukti i kaire ne 100% likusio ploto o 50%) ir gaunam 50% - 400px*/
 
-img{
+header > img{
     float: left;
     height: 46px;
 }
 
-a{
-    /* By default a elementas yra display: inline o inline mums neleidzia keisti line-height, todel keiciam atvaizdavimo buda i inline-block  */
-    display: inline-block;
+nav > a {
+    /* header > a reiskia, kad selectiname konkreciai headeryje esanti a taga */
+
+    display: inline-block;   
+     /* By default a elementas yra display: inline o inline mums neleidzia keisti line-height, todel keiciam atvaizdavimo buda i inline-block  */
     font-size: 18px;
     line-height: 20px;
     margin-left: 20px;
-    text-decoration: none;
+    text-decoration: none; 
+    /* Istrinam underline */
     color: black;
-}
-nav{
-    float: right;
-    /* 26 px todel, kad musu logotipas turi 46px auksti, a elementas turi 20px linijos auksti, 46-20 = 26px tam, kad musu nav elementas susilygintu su logotipu. */
-    margin-top: 26px;
+    padding-bottom: 5px; 
+    /* tarp borderio ir turinio yra paddingas, tam, kad padidinti borderio atsistumima i apacia nuo teksto idedam padding bottom 5px */
 }
 
-main {
+
+nav > a:hover{
+border-bottom: solid 2px rgb(222, 82, 59);
+}
+
+nav > a:first-child{
+border-bottom: solid 2px rgb(222, 82, 59);
+/* first-child selectorius pasirenka pirmaji tevinio elemento vaika ir nustato jo stiliaus savybes */
+}
+
+header > nav{
+    float: right;
+    margin-top: 26px;    
+    /* 26 px todel, kad musu logotipas turi 46px auksti, a elementas turi 20px linijos auksti, 46-20 = 26px tam, kad musu nav elementas susilygintu su logotipu. */
+}
+
+body > main {
     margin-top: 100px;
     display: inline-block;
+}
+
+main > div{
+    width: 45%;
+    float: left;
+    background-color: aqua;
+}
+
+div > h1{
+
+}
+
+div > p{
+
+}
+
+div > a{
+background-color: blueviolet;
+}
+
+main > img{
+    width: 55%;
+    float: left;
+    height: 300px;
+    background-color: green;
 }
