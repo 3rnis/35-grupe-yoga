@@ -1,12 +1,36 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 header,
 main {
-    background-color: yellow; 
+    background-color: cyan; 
     width: 800px; 
     /* elemento iscentravimas 100% (visas elemento dydis) - 800px elemento plotis supaprastinam (kadangi mums reikia atsitraukti i kaire ne 100% likusio ploto o 50%) ir gaunam 50% - 400px*/
     margin-left: calc(50% - 400px); 
 }
 
-main {
-    margin-top: 100px;
+img{
+    float: left;
+    height: 46px;
 }
 
+a{
+    /* By default a elementas yra display: inline o inline mums neleidzia keisti line-height, todel keiciam atvaizdavimo buda i inline-block  */
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+nav{
+    float: right;
+    /* 26 px todel, kad musu logotipas turi 46px auksti, a elementas turi 20px linijos auksti, 46-20 = 26px tam, kad musu nav elementas susilygintu su logotipu. */
+    margin-top: 26px;
+}
+
+main {
+    margin-top: 100px;
+    display: inline-block;
+}
