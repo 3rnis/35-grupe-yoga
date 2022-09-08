@@ -16,7 +16,8 @@ body {
 body > header,
 body > main {
     width: 1000px; 
-    margin-left: calc(50% - 500px); 
+    margin-left: calc(50% - 500px);
+    margin-top: 20px;
 }   /* elemento iscentravimas 100% (visas elemento dydis) - 800px elemento plotis supaprastinam (kadangi mums reikia atsitraukti i kaire ne 100% likusio ploto o 50%) ir gaunam 50% - 400px*/
 
 header > img{
@@ -67,14 +68,27 @@ main > div{
 }
 
 div > h1{
+margin-bottom: 10px;
+font-weight: normal;
+font-family: cursive;
+}
 
+h1 > span {
+    color:rgb(222, 82, 59);
 }
 
 div > p{
-
+margin-bottom: 25px;
 }
 
 div > a{
+    padding: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+    background-color: tomato;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
 }
 
 main > img{
